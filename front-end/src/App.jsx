@@ -1,7 +1,6 @@
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
   Outlet,
 } from "react-router-dom";
 import Footer from "./components/Footer";
@@ -11,6 +10,16 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Showblog from "./pages/Showblog";
+
+const Layout = () => {
+  return (
+    <>
+      <NavBar />
+      <Outlet />
+      <Footer />
+    </>
+  );
+};
 
 const router = createBrowserRouter([
   {
@@ -41,15 +50,7 @@ const router = createBrowserRouter([
   },
 ]);
 
-const Layout = () => {
-  return (
-    <>
-      <NavBar />
-      <Outlet />
-      <Footer />
-    </>
-  );
-};
+
 
 function App() {
   return (
