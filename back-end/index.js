@@ -1,9 +1,9 @@
 import express from "express";
+import cookieParser from "cookie-parser";
+import multer from "multer";
 import authRoutes from "./routes/auth.js";
 import userRoutes from "./routes/users.js";
 import postRoutes from "./routes/posts.js";
-import cookieParser from "cookie-parser";
-import multer from "multer";
 
 const app = express();
 
